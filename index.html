@@ -1,100 +1,214 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paintworx Automotive Repairs</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
+    <script type="module" src="map.js"></script>
   </head>
   <body>
     <header>
-      <a href="#home">
-        <img id="logo" src="/Photos/Logo-removebg-preview.png" alt="" />
-      </a>
+      <img
+        onclick="scrollToSection(1, true)"
+        src="Images/Logo-removebg-preview.png"
+        alt="Logo"
+        id="logo"
+      />
       <nav>
-        <a href="#home" id="homeLink">Home</a>
-        <a href="#ourServices"id="ourServicesLink">Services</a>
-        <a href="#aboutUs" id="aboutUsLink">About Us</a>
-        <a href="#clientTestimonials" id="clientTestimonialsLink">Client Testimonials</a>
-        <a href="#contactUs" id="contactUsLink">Contact Us</a>
+        <ul>
+          <li>
+            <a
+              onclick="scrollToSection(1)"
+              id="section-1-link"
+              class="navigation-text"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="scrollToSection(2)"
+              id="section-2-link"
+              class="navigation-text"
+              >Services</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="scrollToSection(3)"
+              id="section-3-link"
+              class="navigation-text"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="scrollToSection(4)"
+              id="section-4-link"
+              class="navigation-text"
+              >Client Testimonials</a
+            >
+          </li>
+          <li>
+            <a
+              onclick="scrollToSection(5)"
+              id="section-5-link"
+              class="navigation-text"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
       </nav>
-      <button id="menu">
-        <ion-icon name="menu-outline" class="icon menu"></ion-icon>
+      <button
+        id="mobile-menu-button"
+        class="hidden"
+        onclick="toggleMobileMenu()"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          id="mobile-menu-button-icon"
+          viewBox="0 0 512 512"
+        >
+          <path
+            fill="none"
+            stroke="#1C244B"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            stroke-width="32"
+            d="M80 160h352M80 256h352M80 352h352"
+          />
+        </svg>
       </button>
     </header>
+    <div id="mobile-menu" class="hidden">
+      <ul>
+        <li>
+          <a
+            onclick="scrollToSection(1)"
+            id="section-1-link"
+            class="navigation-text"
+            >Home</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="scrollToSection(2)"
+            id="section-2-link"
+            class="navigation-text"
+            >Services</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="scrollToSection(3)"
+            id="section-3-link"
+            class="navigation-text"
+            >About Us</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="scrollToSection(4)"
+            id="section-4-link"
+            class="navigation-text"
+            >Client Testimonials</a
+          >
+        </li>
+        <li>
+          <a
+            onclick="scrollToSection(5)"
+            id="section-5-link"
+            class="navigation-text"
+            >Contact Us</a
+          >
+        </li>
+      </ul>
+    </div>
     <main>
-      <div id="home">
+      <section id="section-1">
         <img
           id="background"
-          src="/Photos/Home Page Photos/Home Page - Background (HQ).jpg"
-          alt=""
+          src="Images/Home Page Photos/Home Page - Background (HQ).jpg"
+          alt="Photo of a car."
         />
         <div id="overlay"></div>
-        <h1 id="title">Paintworx Automotive Repairs</h1>
-        <p id="tagline">
+        <h1 class="title-text">Paintworx Automotive Repairs</h1>
+        <p id="tagline" class="paragraph-text">
           A vehicle body shop with over 30 years of combined experience
         </p>
-      </div>
-      <section id="ourServices">
-        <h2 class="subtitle">Our Services</h2>
-        <p class="subtitleText">
+      </section>
+      <section id="section-2">
+        <h2 class="heading-text">Our Services</h2>
+        <p class="paragraph-text">
           We offer various high quality services including:
         </p>
-        <div class="services">
-          <div class="service a">
-            <img src="/Photos/Services Photos/Accident_Insurance.jpg" />
-            <div class="serviceText">
-              <h3 class="serviceTitle">Accident/Insurance</h3>
-              <p class="serviceTitleText">
+        <div id="services">
+          <div class="service" id="service-1">
+            <img
+              class="service-img"
+              src="Images/Services Photos/Accident_Insurance.jpg"
+              alt=""
+            />
+            <div class="service-text">
+              <h3 class="subheading-text">Accident/<wbr />Insurance</h3>
+              <p class="paragraph-text">
                 We cover day to day knocks and bumps to estimates for insurance
                 companies.
               </p>
             </div>
           </div>
-          <div class="service b">
-            <img src="/Photos/Services Photos/Services - Lease.jpg" />
-            <div class="serviceText">
-              <h3 class="serviceTitle">Lease/PCP</h3>
-              <p class="serviceTitleText">
+          <div class="service" id="service-2">
+            <img
+              class="service-img"
+              src="Images/Services Photos/Services - Lease.jpg"
+              alt=""
+            />
+            <div class="service-text">
+              <h3 class="subheading-text">Lease/<wbr />PCP</h3>
+              <p class="paragraph-text">
                 Do you have a vehicle coming to the end of its contract? We can
                 give you an estimate on any work needed for its return.
               </p>
             </div>
           </div>
-          <div class="service c">
+          <div class="service" id="service-3">
             <img
-              src="/Photos/Services Photos/Services - Wheels & Brake Calipers.jpg"
+              class="service-img"
+              src="Images/Services Photos/Services - Wheels & Brake Calipers.jpg"
+              alt=""
             />
-            <div class="serviceText">
-              <h3 class="serviceTitle">Wheels/Calipers</h3>
-              <p class="serviceTitleText">
+            <div class="service-text">
+              <h3 class="subheading-text">Wheels/<wbr />Calipers</h3>
+              <p class="paragraph-text">
                 We offer standard wheel repairs, diamond cut wheel repairs, and
                 custom colours and finishes for break calipers.
               </p>
             </div>
           </div>
-          <div class="service d">
+          <div class="service" id="service-4">
             <img
-              src="/Photos/Services Photos/Services - Custom Paintwork.jpg"
+              class="service-img"
+              src="Images/Services Photos/Services - Custom Paintwork.jpg"
+              alt=""
             />
-            <div class="serviceText">
-              <h3 class="serviceTitle">Custom Paintwork</h3>
-              <p class="serviceTitleText">
+            <div class="service-text">
+              <h3 class="subheading-text">Custom Paintwork</h3>
+              <p class="paragraph-text">
                 We can offer all special effect paints to achieve your dream
                 look.
               </p>
             </div>
           </div>
-          <div class="service e">
-            <img src="/Photos/Services Photos/Services - Restorations.jpg" />
-            <div class="serviceText">
-              <h3 class="serviceTitle">Restorations</h3>
-              <p class="serviceTitleText">
+          <div class="service" id="service-5">
+            <img
+              class="service-img"
+              src="Images/Services Photos/Services - Restorations.jpg"
+              alt=""
+            />
+            <div class="service-text">
+              <h3 class="subheading-text">Restorations</h3>
+              <p class="paragraph-text">
                 We offer full shell repaints or bare metal shell repaints and
                 are happy to work with your budget to get your project looking
                 good as new.
@@ -103,61 +217,56 @@
           </div>
         </div>
       </section>
-      <section id="aboutUs">
-        <h2 class="subtitle mobile">About Us</h2>
-        <div class="container">
-          <div id="staffPhoto">
-            <img src="/Photos/About Us Photos/About Us - Team Image.jpg" />
+      <section id="section-3">
+        <h2 class="heading-text">About Us</h2>
+        <div id="about-us-container">
+          <img src="Images/About Us Photos/About Us - Team Image.jpg" />
+          <div class="staff-description-container">
+            <h3 class="subheading-text">Jay Miotti (Left):</h3>
+            <p class="paragraph-text">
+              Diploma in mechanical maintenance and repair; diploma in vehicle
+              body and paint refinishing, over 17 years experience. <br />
+              <br />
+              "Reputation is everything for us, every job leaves the workshop
+              doors good as new. What keeps us passionate about our job? Being
+              constantly reccomended by our customers for our workmanship and
+              pride."
+            </p>
           </div>
-          <div id="staffDetails">
-            <h2 class="subtitle nMobile">About Us</h2>
-            <div id="staffInfo">
-              <div class="subtitleText">
-                Jay Miotti (Left): <br />
-                <br />
-                Diploma in mechanical maintenance and repair; diploma in vehicle
-                body and paint refinishing, over 17 years experience. <br />
-                <br />
-                "Reputation is everything for us, every job leaves the workshop
-                doors good as new. What keeps us passionate about our job? Being
-                constantly reccomended by our customers for our workmanship and
-                pride."
-              </div>
-              <div class="subtitleText">
-                Ant Miotti (Right): <br />
-                <br />
-                Diploma in vehicle paint refinishing; disploma in vehicle body
-                repair; diploma in vehicle maintenance and repair with over 15
-                years of experience. 6 years work experience with Mercedes,
-                Volkswagen, Audi, Jaguar, Land Rover approved franchise. <br />
-                <br />
-                "I'd never return a car to a customer in a condition that I'd be
-                unhappy to recieve it, and I'm a very particular customer! All
-                my experience and training have resulted in a determination to
-                only produce top quality repairs with attention to detail. The
-                bigger the challenge the better!"
-              </div>
-            </div>
+          <div class="staff-description-container">
+            <h3 class="subheading-text">Ant Miotti (Right):</h3>
+            <p class="paragraph-text">
+              Diploma in vehicle paint refinishing; disploma in vehicle body
+              repair; diploma in vehicle maintenance and repair with over 15
+              years of experience. 6 years work experience with Mercedes,
+              Volkswagen, Audi, Jaguar, Land Rover approved franchise. <br />
+              <br />
+              "I'd never return a car to a customer in a condition that I'd be
+              unhappy to recieve it, and I'm a very particular customer! All my
+              experience and training have resulted in a determination to only
+              produce top quality repairs with attention to detail. The bigger
+              the challenge the better!"
+            </p>
           </div>
         </div>
       </section>
-      <section id="clientTestimonials">
-        <h2 class="subtitle">Client Testimonials</h2>
-        <div id="quoteGrid">
-          <p class="subtitleText quote">
+      <section id="section-4">
+        <h2 class="heading-text">Client Testimonials</h2>
+        <div id="quote-grid">
+          <p class="paragraph-text quote">
             "Jay from Paintworx has been absolutely fantastic. From start to
             finish the experience has been highly professional and efficient.
             Throughout the process there has been strong communication and
             images of the work being done. I cannot recommend him enough."<br />
             <span class="author">-Benjamin Murphy</span>
           </p>
-          <p class="subtitleText quote">
+          <p class="paragraph-text quote">
             "This place is insane best body repair company Jay and his brother
             go above and beyond to sort everything out for you. 10 star review
             from me. Thank you so much."<br />
             <span class="author">-Jamie David Joesph Joinso</span>
           </p>
-          <p class="subtitleText quote">
+          <p class="paragraph-text quote">
             "Great customer service. Unbelievable job and fast to. I can't
             recommend this company highly enough. Nice curtesy car to. Will
             definitely use them again."<br />
@@ -165,49 +274,145 @@
           </p>
         </div>
       </section>
-      <section id="contactUs">
-        <div id="contactDetails">
-          <div id="contactIcons">
-            <h2 class="subtitle">
+      <section id="section-5">
+        <div id="contact-details">
+          <div id="contact-information">
+            <h2 class="title-text">
               So please feel free to contact us with any enquiries!
             </h2>
             <div id="icons">
               <a href="tel:01244 532900">
-                <ion-icon name="call-outline" class="phone icon"></ion-icon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon phone"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M451 374c-15.88-16-54.34-39.35-73-48.76-24.3-12.24-26.3-13.24-45.4.95-12.74 9.47-21.21 17.93-36.12 14.75s-47.31-21.11-75.68-49.39-47.34-61.62-50.53-76.48 5.41-23.23 14.79-36c13.22-18 12.22-21 .92-45.3-8.81-18.9-32.84-57-48.9-72.8C119.9 44 119.9 47 108.83 51.6A160.15 160.15 0 0083 65.37C67 76 58.12 84.83 51.91 98.1s-9 44.38 23.07 102.64 54.57 88.05 101.14 134.49S258.5 406.64 310.85 436c64.76 36.27 89.6 29.2 102.91 23s22.18-15 32.83-31a159.09 159.09 0 0013.8-25.8C465 391.17 468 391.17 451 374z"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-miterlimit="10"
+                    stroke-width="32"
+                  />
+                </svg>
               </a>
               <a href="https://wa.me/7814404752">
-                <ion-icon name="logo-whatsapp" class="whatsapp icon"></ion-icon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon whatsapp"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M414.73 97.1A222.14 222.14 0 00256.94 32C134 32 33.92 131.58 33.87 254a220.61 220.61 0 0029.78 111L32 480l118.25-30.87a223.63 223.63 0 00106.6 27h.09c122.93 0 223-99.59 223.06-222A220.18 220.18 0 00414.73 97.1zM256.94 438.66h-.08a185.75 185.75 0 01-94.36-25.72l-6.77-4-70.17 18.32 18.73-68.09-4.41-7A183.46 183.46 0 0171.53 254c0-101.73 83.21-184.5 185.48-184.5a185 185 0 01185.33 184.64c-.04 101.74-83.21 184.52-185.4 184.52zm101.69-138.19c-5.57-2.78-33-16.2-38.08-18.05s-8.83-2.78-12.54 2.78-14.4 18-17.65 21.75-6.5 4.16-12.07 1.38-23.54-8.63-44.83-27.53c-16.57-14.71-27.75-32.87-31-38.42s-.35-8.56 2.44-11.32c2.51-2.49 5.57-6.48 8.36-9.72s3.72-5.56 5.57-9.26.93-6.94-.46-9.71-12.54-30.08-17.18-41.19c-4.53-10.82-9.12-9.35-12.54-9.52-3.25-.16-7-.2-10.69-.2a20.53 20.53 0 00-14.86 6.94c-5.11 5.56-19.51 19-19.51 46.28s20 53.68 22.76 57.38 39.3 59.73 95.21 83.76a323.11 323.11 0 0031.78 11.68c13.35 4.22 25.5 3.63 35.1 2.2 10.71-1.59 33-13.42 37.63-26.38s4.64-24.06 3.25-26.37-5.11-3.71-10.69-6.48z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                  />
+                </svg>
               </a>
               <a
                 href="https://www.facebook.com/people/Paintworx-automotive-repairs/100068573505711/"
               >
-                <ion-icon name="logo-facebook" class="facebook icon"></ion-icon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon facebook"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M480 257.35c0-123.7-100.3-224-224-224s-224 100.3-224 224c0 111.8 81.9 204.47 189 221.29V322.12h-56.89v-64.77H221V208c0-56.13 33.45-87.16 84.61-87.16 24.51 0 50.15 4.38 50.15 4.38v55.13H327.5c-27.81 0-36.51 17.26-36.51 35v42h62.12l-9.92 64.77H291v156.54c107.1-16.81 189-109.48 189-221.31z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                  />
+                </svg>
               </a>
               <a
                 href="https://www.google.co.uk/maps/place/Paintworx+Automotive+Repairs/@53.1985904,-2.9980479,18z/data=!3m1!4b1!4m6!3m5!1s0x487adbae59f448e5:0x838c56a04f54d7d3!8m2!3d53.1985888!4d-2.9969536!16s%2Fg%2F11pf7whkmx"
               >
-                <ion-icon name="location-sharp" class="map icon"></ion-icon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon location"
+                  viewBox="0 0 512 512"
+                >
+                  <path
+                    d="M256 32C167.67 32 96 96.51 96 176c0 128 160 304 160 304s160-176 160-304c0-79.49-71.67-144-160-144zm0 224a64 64 0 1164-64 64.07 64.07 0 01-64 64z"
+                    fill="currentColor"
+                    stroke="currentColor"
+                  />
+                </svg>
               </a>
               <a href="mailto:paintworxamr@outlook.com">
-                <ion-icon name="mail-outline" class="email icon"></ion-icon>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="icon mail"
+                  viewBox="0 0 512 512"
+                >
+                  <rect
+                    x="48"
+                    y="96"
+                    width="416"
+                    height="320"
+                    rx="40"
+                    ry="40"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                  />
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="32"
+                    d="M112 160l144 112 144-112"
+                  />
+                </svg>
               </a>
             </div>
           </div>
-          <div id="location"></div>
+          <div id="map"></div>
         </div>
       </section>
     </main>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
-    ></script>
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBeAesokL2EZYsXqzonPBUEjFcVITOpgk0&callback=initMap&v=weekly"
-      defer
-    ></script>
+    <script>
+      ((g) => {
+        var h,
+          a,
+          k,
+          p = "The Google Maps JavaScript API",
+          c = "google",
+          l = "importLibrary",
+          q = "__ib__",
+          m = document,
+          b = window;
+        b = b[c] || (b[c] = {});
+        var d = b.maps || (b.maps = {}),
+          r = new Set(),
+          e = new URLSearchParams(),
+          u = () =>
+            h ||
+            (h = new Promise(async (f, n) => {
+              await (a = m.createElement("script"));
+              e.set("libraries", [...r] + "");
+              for (k in g)
+                e.set(
+                  k.replace(/[A-Z]/g, (t) => "_" + t[0].toLowerCase()),
+                  g[k]
+                );
+              e.set("callback", c + ".maps." + q);
+              a.src = `https://maps.${c}apis.com/maps/api/js?` + e;
+              d[q] = f;
+              a.onerror = () => (h = n(Error(p + " could not load.")));
+              a.nonce = m.querySelector("script[nonce]")?.nonce || "";
+              m.head.append(a);
+            }));
+        d[l]
+          ? console.warn(p + " only loads once. Ignoring:", g)
+          : (d[l] = (f, ...n) => r.add(f) && u().then(() => d[l](f, ...n)));
+      })({
+        key: "AIzaSyBeAesokL2EZYsXqzonPBUEjFcVITOpgk0",
+        v: "weekly",
+      });
+    </script>
   </body>
 </html>

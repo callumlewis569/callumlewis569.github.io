@@ -1,0 +1,50 @@
+/*
+1. Display & Box Model:
+   - display
+   - position
+   - float, clear
+   - width, height
+   - margin, padding
+   - border, border-radius, box-shadow
+
+2.  Typography:
+   - font, font-family, font-size, font-weight, font-style
+   - color
+   - text-align, text-transform, line-height
+   - letter-spacing, word-spacing
+
+3. Background & Borders:
+   - background, background-color, background-image, etc.
+   - border, border-color, border-width, etc.
+   - border-radius
+
+4. Spacing & Layout:
+   - margin, padding
+   - width, height
+   - max-width, max-height
+   - position, top, right, bottom, left
+   - float, clear
+
+5. Flexbox/Grid:
+   - display: flex or display: grid
+   - Flexbox or Grid properties (flex, grid-template, etc.)
+
+6. Positioning & Transformations:
+   - position, top, right, bottom, left
+   - transform, transition, animation
+
+7. Other Visual Properties:
+   - color
+   - outline
+   - opacity
+   - visibility
+
+8. Miscellaneous:
+   - cursor
+   - z-index
+   - overflow
+
+9. Pseudo-classes and Pseudo-elements:
+   - :hover, :active, :focus
+   - ::before, ::after
+*/
